@@ -1,0 +1,53 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { company, services } from "../data/site.js";
+---
+<BaseLayout title="Contacto y cotizaciones | M&M Construcciones" description="Contacta a M&M Construcciones en General para consultar por construcción, ampliaciones, remodelaciones, obras comerciales, terminaciones y mantención.">
+  <section class="page-hero page-hero-small"><div class="page-hero-image" style={`background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=85')`}></div><div class="page-hero-overlay"></div><div class="container page-hero-content"><span class="eyebrow eyebrow-light">CONTACTO</span><h1>Hablemos de <em>tu proyecto.</em></h1><p>Cuéntanos qué necesitas. Podemos revisar tus antecedentes o coordinar una visita para evaluar el trabajo.</p></div></section>
+  <section class="section contact-section"><div class="container contact-grid">
+    <div class="contact-copy"><span class="eyebrow">ESTAMOS PARA AYUDARTE</span><h2>El primer paso es <em>conversar.</em></h2><p>Atendemos proyectos residenciales y comerciales en la Región Metropolitana y evaluamos solicitudes de otras regiones según el alcance del trabajo.</p>
+      <div class="contact-method"><span class="contact-icon">☎</span><div><small>LLÁMANOS</small><a href={`tel:+${company.phoneDigits}`}>{company.phoneDisplay}</a></div></div>
+      <div class="contact-method"><span class="contact-icon">✉</span><div><small>ESCRÍBENOS</small><a href={`mailto:${company.email}`}>{company.email}</a></div></div>
+      <div class="contact-method"><span class="contact-icon">⌖</span><div><small>ZONA DE ATENCIÓN</small><span>Región Metropolitana y otras regiones de Chile.</span></div></div>
+      <a class="button button-whatsapp" href={`https://wa.me/${company.phoneDigits}?text=${encodeURIComponent("Hola, quisiera consultar por un proyecto con M&M Construcciones.")}`} target="_blank" rel="noopener noreferrer">Abrir WhatsApp ↗</a>
+    </div>
+    <form class="quote-form" id="quote-form">
+      <div class="form-heading"><span class="eyebrow">SOLICITUD DE COTIZACIÓN</span><h3>Cuéntanos qué necesitas</h3><p>Completa los datos y prepararemos un mensaje para enviarlo por WhatsApp.</p></div>
+      <label>Nombre y apellido<input name="nombre" type="text" autocomplete="name" placeholder="Tu nombre" required /></label>
+      <div class="form-row">
+        <label>Teléfono<input name="telefono" type="tel" autocomplete="tel" placeholder="+56 9..." required /></label>
+        <label>Tipo de cliente<select name="tipo" required><option value="">Seleccionar</option><option>Particular</option><option>Empresa</option></select></label>
+      </div>
+      <div class="form-row">
+        <label>Comuna / ciudad<input name="comuna" type="text" placeholder="¿Dónde se realizará el trabajo?" required /></label>
+        <label>Servicio<select name="servicio" required><option value="">Seleccionar servicio</option>{services.map((service) => <option>{service.title}</option>)}<option>Otro / No estoy seguro</option></select></label>
+      </div>
+      <label>Cuéntanos brevemente sobre tu proyecto<textarea name="detalle" rows="4" placeholder="Describe el trabajo que necesitas..." required></textarea></label>
+      <button class="button button-primary form-submit" type="submit">Preparar solicitud por WhatsApp ↗</button>
+      <p class="form-privacy">Al continuar, se abrirá WhatsApp con los datos que ingresaste para que puedas revisarlos y enviarlos. Esta página no almacena la información.</p>
+      <p class="form-status" id="form-status" aria-live="polite"></p>
+    </form>
+  </div></section>
+</BaseLayout>
+<script>
+  const form = document.querySelector("#quote-form");
+  const status = document.querySelector("#form-status");
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    const data = new FormData(form);
+    const message = [
+      "Hola, quisiera solicitar una cotización a M&M Construcciones en General.",
+      "",
+      `Nombre: ${data.get("nombre")}`,
+      `Teléfono: ${data.get("telefono")}`,
+      `Tipo de cliente: ${data.get("tipo")}`,
+      `Comuna / ciudad: ${data.get("comuna")}`,
+      `Servicio: ${data.get("servicio")}`,
+      `Descripción: ${data.get("detalle")}`
+    ].join("\n");
+    const url = `https://wa.me/56990193427?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+    if (status) status.textContent = "Se preparó tu mensaje. Revísalo y presiona Enviar en WhatsApp.";
+  });
+</script>

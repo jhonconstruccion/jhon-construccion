@@ -1,0 +1,34 @@
+---
+import { company, services } from "../data/site.js";
+---
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="/images/logo-mm.png" alt="M&M Construcciones en General" />
+      <p>Soluciones constructivas para hogares, empresas y espacios comerciales.</p>
+      <span class="footer-experience">{company.experience}</span>
+    </div>
+    <div>
+      <h3>Explora</h3>
+      <a href="/nosotros/">Nosotros</a>
+      <a href="/servicios/">Servicios</a>
+      <a href="/proyectos/">Proyectos</a>
+      <a href="/contacto/">Contacto</a>
+    </div>
+    <div>
+      <h3>Servicios</h3>
+      {services.map((service) => <a href={`/servicios/${service.slug}/`}>{service.title}</a>)}
+    </div>
+    <div>
+      <h3>Contacto</h3>
+      <a href={`tel:+${company.phoneDigits}`}>{company.phoneDisplay}</a>
+      <a href={`mailto:${company.email}`}>{company.email}</a>
+      <p>Región Metropolitana y otras regiones de Chile.</p>
+      <a class="footer-whatsapp" href={`https://wa.me/${company.phoneDigits}?text=${encodeURIComponent("Hola, quisiera consultar por un proyecto con M&M Construcciones.")}`} target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp ↗</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© {new Date().getFullYear()} M&M Construcciones en General. Todos los derechos reservados.</span>
+    <span>Construimos confianza. Desarrollamos proyectos.</span>
+  </div>
+</footer>

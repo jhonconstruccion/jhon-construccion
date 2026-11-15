@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: mm-construcciones-web
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist

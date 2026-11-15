@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { services, company } from "../../data/site.js";
+
+export function getStaticPaths() {
+  return services.map((service) => ({
+    params: { slug: service.slug },
+    props: { service }
+  }));
+}
+
+const { service } = Astro.props;
+const waText = `Hola, quisiera consultar por el servicio de ${service.title}.`;
+---
+<BaseLayout title={`${service.title} | M&M Construcciones en General`} description={`${service.description} M&M Construcciones: más de 10 años de experiencia en el rubro. Atención en la Región Metropolitana y otras regiones según proyecto.`}>
+  <section class="page-hero service-hero">
+    <div class="page-hero-image" style={`background-image:url('${service.image}')`}></div><div class="page-hero-overlay"></div>
+    <div class="container page-hero-content"><span class="eyebrow eyebrow-light">SERVICIO {service.number} / M&M CONSTRUCCIONES</span><h1>{service.title}<em>.</em></h1><p>{service.summary}</p><a class="button button-primary" href="/contacto/">Consultar por este servicio ↗</a></div>
+  </section>
+  <section class="section"><div class="container service-detail-grid"><div><span class="eyebrow">SOLUCIONES A MEDIDA</span><h2>Un trabajo pensado para <em>lo que necesitas.</em></h2><p>{service.description}</p><p>En M&M comenzamos por conocer el espacio, los objetivos y los antecedentes disponibles. A partir de esa evaluación conversamos sobre el alcance y los próximos pasos del trabajo.</p><a class="text-link" href="/contacto/">Solicitar una evaluación <span>→</span></a></div><div class="detail-panel"><h3>¿Cómo podemos ayudarte?</h3><ul>{service.benefits.map((benefit) => <li>{benefit}</li>)}</ul><div class="detail-panel-foot"><span>{service.audience}</span><a href={`https://wa.me/${company.phoneDigits}?text=${encodeURIComponent(waText)}`} target="_blank" rel="noopener noreferrer">Consultar por WhatsApp ↗</a></div></div></div></section>
+  <section class="service-process"><div class="container service-process-inner"><div><span class="eyebrow eyebrow-light">EL PRIMER PASO</span><h2>Cuéntanos qué tienes <em>en mente.</em></h2><p>Podemos revisar fotografías y antecedentes o coordinar una visita, según las características del proyecto.</p></div><a class="button button-primary" href="/contacto/">Hablemos de tu proyecto ↗</a></div></section>
+  <section class="section related-section"><div class="container"><div class="section-heading"><div><span class="eyebrow">OTRAS SOLUCIONES</span><h2>También podemos ayudarte <em>con otros trabajos.</em></h2></div><a class="text-link desktop-link" href="/servicios/">Todos los servicios →</a></div><div class="related-links">{services.filter((item) => item.slug !== service.slug).slice(0,3).map((item) => <a href={`/servicios/${item.slug}/`}><span>{item.number}</span><strong>{item.title}</strong><b>↗</b></a>)}</div></div></section>
+</BaseLayout>

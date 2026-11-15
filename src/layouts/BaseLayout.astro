@@ -1,0 +1,74 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { company, services } from "../data/site.js";
+
+const {
+  title = "M&M Construcciones en General | Construcción, ampliaciones y remodelaciones",
+  description = "Construcción general, ampliaciones, remodelaciones, obras comerciales, terminaciones, mantención y reparaciones. Más de 10 años de experiencia en el rubro.",
+  canonicalPath = "/"
+} = Astro.props;
+
+const canonicalUrl = Astro.site ? new URL(canonicalPath, Astro.site).toString() : undefined;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": company.name,
+  "email": company.email,
+  "telephone": company.phoneDisplay,
+  "description": description,
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Región Metropolitana, Chile"
+  },
+  "knowsAbout": services.map((service) => service.title)
+};
+---
+<!doctype html>
+<html lang="es-CL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#102b4c" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/images/logo-mm.png" />
+    <script type="application/ld+json" set:html={JSON.stringify(schema)}></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <Header />
+    <main id="contenido">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      const toggle = document.querySelector("[data-menu-toggle]");
+      const nav = document.querySelector("[data-site-nav]");
+      toggle?.addEventListener("click", () => {
+        const isOpen = nav?.classList.toggle("is-open") ?? false;
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        toggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+      });
+      nav?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("is-open");
+          toggle?.setAttribute("aria-expanded", "false");
+          toggle?.setAttribute("aria-label", "Abrir menú");
+        });
+      });
+    </script>
+  </body>
+</html>
