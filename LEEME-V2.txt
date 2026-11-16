@@ -1,3 +1,6 @@
-Esta es la versión v2 con contraste mejorado.
-Abre el archivo vista-previa.html para ver el diseño ajustado.
-También puedes usar el código fuente actualizado en src/styles/global.css.
+Versión con fotografías reales seleccionadas para M&M Construcciones.
+
+Se mantiene la estructura, navegación y diseño de la web. Se sustituyen las imágenes ilustrativas por fotografías locales optimizadas en public/images/portfolio.
+
+Para ver la vista previa, abre vista-previa.html desde esta carpeta.
+Para publicar, ejecuta npm install y npm run build; Astro genera el sitio en dist/.

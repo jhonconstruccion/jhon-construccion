@@ -9,4 +9,4 @@ Esta vista previa es un archivo HTML independiente para revisar el diseño.
 El sitio completo está desarrollado en Astro: src/pages/index.astro es la página de inicio editable.
 Al ejecutar npm install y npm run build, Astro genera el HTML final en dist/index.html.
 
-Las fotografías del portafolio son referenciales y deberán sustituirse por fotos reales de M&M antes de publicar.
+La vista previa utiliza fotografías seleccionadas de trabajos y procesos de M&M, guardadas localmente en public/images/portfolio/.

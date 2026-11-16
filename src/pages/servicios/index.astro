@@ -4,7 +4,7 @@ import { services } from "../../data/site.js";
 ---
 <BaseLayout title="Servicios de construcción | M&M Construcciones" description="Conoce los servicios de M&M Construcciones: construcción general, ampliaciones, remodelaciones, obras comerciales, terminaciones, mantención y reparaciones.">
   <section class="page-hero page-hero-small">
-    <div class="page-hero-image" style={`background-image:url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1800&q=85')`}></div><div class="page-hero-overlay"></div>
+    <div class="page-hero-image" style={`background-image:url('/images/portfolio/comercial-estructura-pasillo.jpg')`}></div><div class="page-hero-overlay"></div>
     <div class="container page-hero-content"><span class="eyebrow eyebrow-light">NUESTROS SERVICIOS</span><h1>Soluciones para cada <em>etapa de tu proyecto.</em></h1><p>Desde una reparación puntual hasta trabajos de construcción y adecuación de espacios residenciales y comerciales.</p></div>
   </section>
   <section class="section"><div class="container"><div class="section-heading"><div><span class="eyebrow">SEIS ÁREAS DE TRABAJO</span><h2>¿Qué necesitas <em>resolver?</em></h2></div><p>Revisa nuestras áreas de servicio y cuéntanos qué tipo de trabajo tienes en mente.</p></div><div class="service-list-grid">{services.map((service) => <a class="service-list-card" href={`/servicios/${service.slug}/`}><img src={service.image} alt={service.imageAlt} loading="lazy"/><div class="service-list-content"><span>{service.number} / SERVICIO</span><h3>{service.title}</h3><p>{service.summary}</p><b>Conocer servicio ↗</b></div></a>)}</div></div></section>

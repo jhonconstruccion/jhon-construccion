@@ -1,0 +1,8 @@
+ACTUALIZACIÓN VISUAL — M&M CONSTRUCCIONES
+
+- Se conserva la estructura original del sitio Astro.
+- Se sustituyen las imágenes de stock por 10 fotografías seleccionadas de trabajos y procesos.
+- Se actualizan portada, tarjetas residencial/comercial, cabeceras internas, servicios y portafolio.
+- Se eliminan los avisos que identificaban las fotos como referenciales.
+- Las imágenes se alojan localmente en public/images/portfolio para mejorar control y carga.
+- No se modifican navegación, formulario, datos de contacto ni configuración de Render.

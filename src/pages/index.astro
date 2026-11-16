@@ -4,7 +4,7 @@ import { company, services, projects } from "../data/site.js";
 ---
 <BaseLayout>
   <section class="hero">
-    <div class="hero-image" role="img" aria-label="Arquitectura residencial contemporánea"></div>
+    <div class="hero-image" role="img" aria-label="Pérgola de madera y quincho junto a piscina"></div>
     <div class="hero-overlay"></div>
     <div class="container hero-content">
       <span class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> M&M CONSTRUCCIONES EN GENERAL</span>
@@ -54,12 +54,12 @@ import { company, services, projects } from "../data/site.js";
       </div>
       <div class="audience-grid">
         <a class="audience-card" href="/servicios/ampliaciones/">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=85" alt="Vivienda contemporánea" loading="lazy" />
+          <img src="/images/portfolio/portfolio-ampliacion-segundo-piso.jpg" alt="Ampliación residencial de segundo piso en ejecución" loading="lazy" />
           <div class="audience-card-overlay"></div>
           <div class="audience-card-content"><span>01 / RESIDENCIAL</span><h3>Tu hogar, pensado para crecer.</h3><p>Construcción, ampliaciones y remodelaciones para viviendas.</p><b>Explorar soluciones ↗</b></div>
         </a>
         <a class="audience-card" href="/servicios/obras-comerciales/">
-          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85" alt="Espacio comercial moderno" loading="lazy" />
+          <img src="/images/portfolio/portfolio-edificio-comercial.jpg" alt="Edificio de varios niveles con fachada vidriada" loading="lazy" />
           <div class="audience-card-overlay"></div>
           <div class="audience-card-content"><span>02 / EMPRESAS Y COMERCIOS</span><h3>Espacios que impulsan tu negocio.</h3><p>Obras, adecuaciones, terminaciones y mantención comercial.</p><b>Explorar soluciones ↗</b></div>
         </a>
@@ -112,15 +112,15 @@ import { company, services, projects } from "../data/site.js";
         <a class="text-link desktop-link" href="/proyectos/">Ver portafolio <span>→</span></a>
       </div>
       <div class="project-grid">
-        {projects.map((project) => (
+        {projects.slice(0, 3).map((project) => (
           <a class="project-card" href="/proyectos/">
-            <div class="project-image"><img src={project.image} alt={project.alt} loading="lazy" /><span class="image-reference">Imagen referencial</span></div>
+            <div class="project-image"><img src={project.image} alt={project.alt} loading="lazy" /></div>
             <div class="project-card-meta"><span>{project.category}</span><span>↗</span></div>
             <h3>{project.title}</h3>
           </a>
         ))}
       </div>
-      <p class="fine-print">Las fotografías de esta primera versión son ilustrativas y no representan obras ejecutadas por M&M. El portafolio se actualizará con fotografías reales autorizadas por la empresa.</p>
+      <p class="fine-print">Una selección de fotografías de trabajos y procesos de M&M Construcciones en General.</p>
       <a class="text-link mobile-link" href="/proyectos/">Ver portafolio <span>→</span></a>
     </div>
   </section>

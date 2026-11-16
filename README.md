@@ -51,7 +51,7 @@ También se incluye `render.yaml` como configuración inicial.
 
 ## Antes de publicar
 
-1. Sustituir las fotografías ilustrativas por fotografías reales de trabajos de M&M, con autorización.
+1. Confirmar que todas las fotografías incorporadas estén autorizadas para su publicación.
 2. Revisar que el número y correo de contacto sean correctos.
 3. Confirmar comunas y regiones que la empresa efectivamente puede atender.
 4. Confirmar el alcance de cada servicio y eliminar cualquier trabajo que no ofrezca.
@@ -61,7 +61,7 @@ También se incluye `render.yaml` como configuración inicial.
 
 ## Fotografías
 
-Las fotografías remotas de esta versión son imágenes ilustrativas de Unsplash. No representan trabajos ejecutados por M&M y están identificadas como referencias en el portafolio. Deben reemplazarse por fotografías reales antes de usar el portafolio como prueba de experiencia.
+La galería utiliza fotografías locales seleccionadas de trabajos y procesos compartidos para M&M. Las imágenes se guardan en `public/images/portfolio/` y se sirven desde el propio sitio para evitar dependencias de bancos de imágenes externos.
 
 ## Formulario
 
