@@ -61,7 +61,7 @@ También se incluye `render.yaml` como configuración inicial.
 
 ## Fotografías
 
-La galería utiliza fotografías locales seleccionadas de trabajos y procesos compartidos para M&M. Las imágenes se guardan en `public/images/portfolio/` y se sirven desde el propio sitio para evitar dependencias de bancos de imágenes externos.
+La galería utiliza fotografías locales seleccionadas de trabajos y procesos compartidos para M&M. Las dos fotografías de reparación y resultado de piscina son los archivos JPEG originales enviados por la empresa; no se sustituyen por imágenes de stock ni generadas. Las imágenes se guardan en `public/images/portfolio/` y se sirven desde el propio sitio.
 
 ## Formulario
 

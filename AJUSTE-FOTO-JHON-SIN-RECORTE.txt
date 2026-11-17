@@ -1,0 +1,1 @@
+Ajuste de fotografía de Jhon en la sección Nosotros. Se reemplazó el retrato cerrado por la composición corporativa completa proporcionada por el usuario. La imagen se muestra completa, con proporción natural (sin recorte ni object-fit: cover). Se conserva la fotografía suministrada y su contenido gráfico original.

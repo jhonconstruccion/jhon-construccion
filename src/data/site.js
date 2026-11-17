@@ -82,7 +82,7 @@ export const services = [
     title: "Reparación y mantención de piscinas",
     summary: "Trabajos para recuperar y conservar piscinas en buenas condiciones.",
     description: "Realizamos trabajos de reparación y mantención de piscinas, evaluando el estado de sus superficies y terminaciones para definir las intervenciones necesarias en cada caso.",
-    image: "/images/portfolio/piscina-resultado-terminado.jpg",
+    image: "/images/portfolio/piscina-resultado-terminado.jpeg",
     imageAlt: "Piscina terminada después de trabajos de reparación y mantención",
     benefits: ["Evaluación del estado general de la piscina", "Reparación de superficies y terminaciones según necesidad", "Trabajos de mantención para conservar la piscina en buenas condiciones"],
     audience: "Piscinas residenciales y espacios recreativos"
@@ -150,7 +150,7 @@ export const projects = [
     title: "Reparación y mantención de piscina",
     category: "Piscinas",
     description: "Registro del resultado de un trabajo de reparación y mantención de piscina.",
-    image: "/images/portfolio/piscina-resultado-terminado.jpg",
+    image: "/images/portfolio/piscina-resultado-terminado.jpeg",
     alt: "Piscina terminada después de trabajos de reparación y mantención"
   }
 ];

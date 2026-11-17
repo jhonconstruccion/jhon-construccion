@@ -1,0 +1,15 @@
+ACTUALIZACIÓN — SECCIÓN DE DIRECCIÓN EJECUTIVA DE OBRA
+
+Se incorporó en la página «Nosotros» una sección para presentar a Jhon como Director Ejecutivo de Obra.
+
+La sección se ubica después de la presentación general de M&M y antes de los valores de la empresa. Incluye una fotografía corporativa entregada para el sitio y un texto breve sobre la coordinación, planificación y seguimiento de los proyectos.
+
+AJUSTE DE FOTOGRAFÍA
+Se reemplazó el retrato cerrado por la composición corporativa completa proporcionada por el usuario. La imagen se presenta completa, respetando su proporción natural y sin recortarla. Se eliminó el pie de foto repetido porque el diseño original ya contiene el logotipo y el cargo.
+
+Archivo de página actualizado: src/pages/nosotros.astro
+Estilos: src/styles/global.css
+Fotografía completa: public/images/team/jhon-director-ejecutivo-completo.jpg
+Vista previa específica: vista-previa-nosotros.html
+
+Se mantiene la estructura general del sitio, el bloque de más de 10 años de experiencia, los servicios, la categoría Obras civiles, la sección de reparación y mantención de piscinas, el portafolio, el formulario de cotización y los datos de contacto.

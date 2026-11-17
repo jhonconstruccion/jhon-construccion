@@ -11,8 +11,8 @@ La página del servicio se genera en:
  /servicios/reparacion-y-mantencion-de-piscinas/
 
 Fotografías incorporadas:
-- piscina-proceso-reparacion.jpg: registro durante los trabajos.
-- piscina-resultado-terminado.jpg: piscina terminada.
+- piscina-proceso-reparacion.jpeg (fotografía original enviada por la empresa): registro durante los trabajos.
+- piscina-resultado-terminado.jpeg (fotografía original enviada por la empresa): piscina terminada.
 
 La página de inicio incorpora una sección destacada con ambas fotografías y un enlace al nuevo servicio. La página individual presenta el proceso y el resultado en una galería más amplia. También se incorporó la piscina terminada al portafolio y el servicio queda disponible en el formulario de cotización, el menú de servicios y el pie de página.
 
@@ -24,3 +24,6 @@ Se actualizaron:
 - La vista previa independiente vista-previa.html.
 
 La estructura existente, los otros seis servicios, el formulario de WhatsApp y el diseño general se mantienen.
+
+
+IMPORTANTE: Las dos fotografías de piscinas utilizadas en la portada, la página del servicio y el portafolio son los archivos originales enviados por M&M. No se reemplazaron por fotografías de stock ni imágenes generadas.

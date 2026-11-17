@@ -19,3 +19,16 @@ Para ejecutar el sitio completo localmente:
 Para generar la versión de producción:
 - Ejecuta: npm run build
 - Astro generará el sitio en la carpeta dist/.
+
+
+NUEVA VISTA PREVIA DE NOSOTROS
+- Abre vista-previa-nosotros.html para revisar la presentación de Jhon como Director Ejecutivo de Obra.
+- La fotografía corporativa está en public/images/team/.
+
+
+PARA ACTUALIZAR GITHUB
+1. Descomprime el ZIP.
+2. Abre la carpeta mm-construcciones-web-final.
+3. Sube el CONTENIDO de esa carpeta al directorio principal del repositorio GitHub, conservando las carpetas src y public.
+4. No subas el ZIP como un único archivo ni crees una carpeta anidada adicional.
+5. Confirma el commit. Si Render tiene Auto-Deploy activado, comenzará una nueva publicación automáticamente.
