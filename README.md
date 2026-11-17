@@ -6,8 +6,8 @@ Sitio corporativo estático desarrollado con Astro para M&M Construcciones en Ge
 
 - Página de inicio orientada a cotizaciones.
 - Página Nosotros.
-- Página general de Servicios y seis páginas individuales.
-- Página de Proyectos.
+- Página general de Servicios y siete páginas individuales, incluida reparación y mantención de piscinas.
+- Página de Proyectos con registros de obras residenciales, comerciales y reparación y mantención de piscinas.
 - Página de Contacto con formulario que prepara un mensaje de WhatsApp.
 - Diseño responsive para móviles, tablets y escritorio.
 - Metadatos SEO básicos y datos estructurados.

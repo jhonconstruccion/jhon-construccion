@@ -1,0 +1,26 @@
+ACTUALIZACIÓN — REPARACIÓN Y MANTENCIÓN DE PISCINAS
+
+Se agregó un séptimo servicio a M&M Construcciones en General:
+
+07 / Reparación y mantención de piscinas
+
+Nuevo resumen:
+Trabajos para recuperar y conservar piscinas en buenas condiciones.
+
+La página del servicio se genera en:
+ /servicios/reparacion-y-mantencion-de-piscinas/
+
+Fotografías incorporadas:
+- piscina-proceso-reparacion.jpg: registro durante los trabajos.
+- piscina-resultado-terminado.jpg: piscina terminada.
+
+La página de inicio incorpora una sección destacada con ambas fotografías y un enlace al nuevo servicio. La página individual presenta el proceso y el resultado en una galería más amplia. También se incorporó la piscina terminada al portafolio y el servicio queda disponible en el formulario de cotización, el menú de servicios y el pie de página.
+
+Se actualizaron:
+- El contador de áreas de servicio: de 06 a 07.
+- La página general de servicios.
+- La descripción SEO de contacto y la descripción general del sitio.
+- La sección Nosotros.
+- La vista previa independiente vista-previa.html.
+
+La estructura existente, los otros seis servicios, el formulario de WhatsApp y el diseño general se mantienen.

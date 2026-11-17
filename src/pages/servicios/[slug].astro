@@ -18,6 +18,26 @@ const waText = `Hola, quisiera consultar por el servicio de ${service.title}.`;
     <div class="container page-hero-content"><span class="eyebrow eyebrow-light">SERVICIO {service.number} / M&M CONSTRUCCIONES</span><h1>{service.title}<em>.</em></h1><p>{service.summary}</p><a class="button button-primary" href="/contacto/">Consultar por este servicio ↗</a></div>
   </section>
   <section class="section"><div class="container service-detail-grid"><div><span class="eyebrow">SOLUCIONES A MEDIDA</span><h2>Un trabajo pensado para <em>lo que necesitas.</em></h2><p>{service.description}</p><p>En M&M comenzamos por conocer el espacio, los objetivos y los antecedentes disponibles. A partir de esa evaluación conversamos sobre el alcance y los próximos pasos del trabajo.</p><a class="text-link" href="/contacto/">Solicitar una evaluación <span>→</span></a></div><div class="detail-panel"><h3>¿Cómo podemos ayudarte?</h3><ul>{service.benefits.map((benefit) => <li>{benefit}</li>)}</ul><div class="detail-panel-foot"><span>{service.audience}</span><a href={`https://wa.me/${company.phoneDigits}?text=${encodeURIComponent(waText)}`} target="_blank" rel="noopener noreferrer">Consultar por WhatsApp ↗</a></div></div></div></section>
+  {service.slug === "reparacion-y-mantencion-de-piscinas" && (
+    <section class="section pool-case-study">
+      <div class="container">
+        <div class="section-heading pool-case-heading">
+          <div><span class="eyebrow">TRABAJO REAL · PISCINAS</span><h2>Del proceso al <em>resultado.</em></h2></div>
+          <p>Conoce parte del trabajo realizado por M&M: desde las labores de reparación hasta la piscina terminada.</p>
+        </div>
+        <div class="pool-before-after">
+          <figure class="pool-photo">
+            <div class="pool-photo-image"><img src="/images/portfolio/piscina-proceso-reparacion.jpg" alt="Piscina durante los trabajos de reparación y mantención realizados por M&M" loading="lazy" decoding="async" /></div>
+            <figcaption><span>01 / PROCESO</span><strong>Durante los trabajos</strong><p>Registro del proceso de reparación y preparación de las superficies.</p></figcaption>
+          </figure>
+          <figure class="pool-photo">
+            <div class="pool-photo-image"><img src="/images/portfolio/piscina-resultado-terminado.jpg" alt="Piscina terminada después de los trabajos de reparación y mantención" loading="lazy" decoding="async" /></div>
+            <figcaption><span>02 / RESULTADO</span><strong>Piscina terminada</strong><p>El espacio renovado y preparado para volver a disfrutarse.</p></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  )}
   <section class="service-process"><div class="container service-process-inner"><div><span class="eyebrow eyebrow-light">EL PRIMER PASO</span><h2>Cuéntanos qué tienes <em>en mente.</em></h2><p>Podemos revisar fotografías y antecedentes o coordinar una visita, según las características del proyecto.</p></div><a class="button button-primary" href="/contacto/">Hablemos de tu proyecto ↗</a></div></section>
   <section class="section related-section"><div class="container"><div class="section-heading"><div><span class="eyebrow">OTRAS SOLUCIONES</span><h2>También podemos ayudarte <em>con otros trabajos.</em></h2></div><a class="text-link desktop-link" href="/servicios/">Todos los servicios →</a></div><div class="related-links">{services.filter((item) => item.slug !== service.slug).slice(0,3).map((item) => <a href={`/servicios/${item.slug}/`}><span>{item.number}</span><strong>{item.title}</strong><b>↗</b></a>)}</div></div></section>
 </BaseLayout>

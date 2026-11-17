@@ -66,15 +66,26 @@ export const services = [
     audience: "Proyectos nuevos y espacios en renovación"
   },
   {
-    slug: "mantencion-y-reparaciones",
+    slug: "obras-civiles",
     number: "06",
-    title: "Mantención y reparaciones",
-    summary: "Soluciones para conservar, reparar y mejorar espacios existentes.",
-    description: "Apoyamos a particulares y empresas con trabajos de mantención y reparación, evaluando cada necesidad antes de proponer una solución.",
+    title: "Obras civiles",
+    summary: "Ejecución de obras civiles y mejoramiento de infraestructura en espacios exteriores.",
+    description: "Desarrollamos trabajos de obras civiles orientados a la construcción y mejoramiento de infraestructura, accesos y espacios de circulación, de acuerdo con las características de cada proyecto.",
     image: "/images/portfolio/portfolio-obra-exterior-pasarela.jpg",
-    imageAlt: "Obra exterior de pasarela y mejoramiento de circulación",
-    benefits: ["Identificación de la necesidad", "Evaluación del trabajo requerido", "Coordinación de la solución y su ejecución"],
-    audience: "Viviendas, oficinas y espacios comerciales"
+    imageAlt: "Obra civil exterior de pasarela y mejoramiento de circulación",
+    benefits: ["Evaluación de las condiciones y requerimientos del proyecto", "Coordinación de trabajos de construcción y mejoramiento", "Soluciones para accesos, circulaciones y espacios exteriores"],
+    audience: "Infraestructura y espacios exteriores"
+  },
+  {
+    slug: "reparacion-y-mantencion-de-piscinas",
+    number: "07",
+    title: "Reparación y mantención de piscinas",
+    summary: "Trabajos para recuperar y conservar piscinas en buenas condiciones.",
+    description: "Realizamos trabajos de reparación y mantención de piscinas, evaluando el estado de sus superficies y terminaciones para definir las intervenciones necesarias en cada caso.",
+    image: "/images/portfolio/piscina-resultado-terminado.jpg",
+    imageAlt: "Piscina terminada después de trabajos de reparación y mantención",
+    benefits: ["Evaluación del estado general de la piscina", "Reparación de superficies y terminaciones según necesidad", "Trabajos de mantención para conservar la piscina en buenas condiciones"],
+    audience: "Piscinas residenciales y espacios recreativos"
   }
 ];
 
@@ -109,7 +120,7 @@ export const projects = [
   },
   {
     title: "Pasarela y obra exterior",
-    category: "Obras exteriores",
+    category: "Obras civiles",
     description: "Trabajo de mejoramiento de circulación peatonal en un espacio exterior.",
     image: "/images/portfolio/portfolio-obra-exterior-pasarela.jpg",
     alt: "Construcción de pasarela exterior junto a una vía pública"
@@ -134,5 +145,12 @@ export const projects = [
     description: "Estructura de madera adosada a una vivienda para ampliar el espacio exterior.",
     image: "/images/portfolio/portfolio-terraza-pergola-madera.jpg",
     alt: "Terraza y pérgola de madera junto a una vivienda"
+  },
+  {
+    title: "Reparación y mantención de piscina",
+    category: "Piscinas",
+    description: "Registro del resultado de un trabajo de reparación y mantención de piscina.",
+    image: "/images/portfolio/piscina-resultado-terminado.jpg",
+    alt: "Piscina terminada después de trabajos de reparación y mantención"
   }
 ];

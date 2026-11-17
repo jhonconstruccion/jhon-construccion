@@ -1,0 +1,9 @@
+AJUSTE DE SERVICIOS — M&M CONSTRUCCIONES
+
+Se reemplazó la categoría “Mantención y reparaciones” por “Obras civiles”.
+
+Nuevo resumen: Ejecución de obras civiles y mejoramiento de infraestructura en espacios exteriores.
+
+Se mantuvo la fotografía de la pasarela, se actualizaron la descripción y los beneficios del servicio, y se cambió la categoría del proyecto de pasarela a “Obras civiles”.
+
+La nueva dirección es /servicios/obras-civiles/. La dirección anterior /servicios/mantencion-y-reparaciones/ redirige a la nueva para evitar enlaces rotos.

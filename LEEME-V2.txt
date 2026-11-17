@@ -1,4 +1,4 @@
-Versión con fotografías reales seleccionadas para M&M Construcciones.
+Versión con 12 fotografías reales seleccionadas para M&M Construcciones, incluida la nueva muestra de reparación y mantención de piscinas.
 
 Se mantiene la estructura, navegación y diseño de la web. Se sustituyen las imágenes ilustrativas por fotografías locales optimizadas en public/images/portfolio.
 

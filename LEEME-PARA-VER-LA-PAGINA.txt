@@ -1,12 +1,21 @@
 VISTA PREVIA DE M&M CONSTRUCCIONES
 
 1. Descomprime el archivo ZIP completo.
-2. Abre la carpeta mm-construcciones-web.
+2. Abre la carpeta mm-construcciones-web-final.
 3. Haz doble clic en vista-previa.html.
-4. Se abrirá la página principal en tu navegador.
+4. Se abrirá una vista general de la web en tu navegador.
 
-Esta vista previa es un archivo HTML independiente para revisar el diseño.
-El sitio completo está desarrollado en Astro: src/pages/index.astro es la página de inicio editable.
-Al ejecutar npm install y npm run build, Astro genera el HTML final en dist/index.html.
+Importante: mantén la carpeta public junto al archivo vista-previa.html para que se carguen el logotipo y las fotografías.
 
-La vista previa utiliza fotografías seleccionadas de trabajos y procesos de M&M, guardadas localmente en public/images/portfolio/.
+El sitio completo está desarrollado en Astro. La página de inicio editable está en src/pages/index.astro.
+La información de los servicios y proyectos está centralizada en src/data/site.js.
+
+Para ejecutar el sitio completo localmente:
+- Instala Node.js 20 o superior.
+- Abre una terminal dentro de la carpeta del proyecto.
+- Ejecuta: npm install
+- Luego ejecuta: npm run dev
+
+Para generar la versión de producción:
+- Ejecuta: npm run build
+- Astro generará el sitio en la carpeta dist/.
